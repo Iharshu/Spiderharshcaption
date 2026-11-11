@@ -1,0 +1,76 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --color-bg-primary: #07080d;
+    --color-bg-secondary: #0c0f18;
+    --color-bg-card: #121624;
+    --color-border-subtle: rgba(255, 255, 255, 0.08);
+    --color-stark-red: #ef4444;
+    --color-arc-cyan: #00f0ff;
+    --color-gold-titanium: #f59e0b;
+  }
+
+  body {
+    background-color: var(--color-bg-primary);
+    color: #f8fafc;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    overflow-x: hidden;
+  }
+}
+
+/* Custom scrollbars for timeline and template trays */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #07080d;
+}
+::-webkit-scrollbar-thumb {
+  background: #1b2135;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2a3352;
+}
+
+/* Stark / Arc Reactor Grid Pattern Backdrop */
+.spider-grid-pattern {
+  background-image: 
+    radial-gradient(circle at 50% 30%, rgba(239, 68, 68, 0.08) 0%, transparent 60%),
+    radial-gradient(circle at 85% 80%, rgba(0, 240, 255, 0.05) 0%, transparent 50%),
+    linear-gradient(to right, rgba(0, 240, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(239, 68, 68, 0.03) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 36px 36px, 36px 36px;
+}
+
+/* Arc Reactor Pulse Glow */
+.arc-reactor-glow {
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.35), inset 0 0 12px rgba(0, 240, 255, 0.2);
+}
+
+.stark-hud-border {
+  border: 1px solid rgba(0, 240, 255, 0.25);
+  box-shadow: 0 0 15px rgba(0, 240, 255, 0.08);
+}
+
+.stark-gold-border {
+  border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+/* Custom Sleek Sliders */
+input[type="range"] {
+  height: 6px;
+  border-radius: 9999px;
+  background: #192033;
+}
+input[type="range"]::-webkit-slider-thumb {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #ef4444;
+  box-shadow: 0 0 8px #ef4444;
+  cursor: pointer;
+}

@@ -1,0 +1,6 @@
+{
+  "name": "SpiderHarshCaption",
+  "description": "Premium Animated Subtitle & Caption Studio for Instagram Reels, YouTube Shorts, and CapCut creators with 500+ templates, transparent video & SRT export.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
